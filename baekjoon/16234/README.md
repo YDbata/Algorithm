@@ -36,8 +36,9 @@ https://www.acmicpc.net/problem/16234
 
 예시 풀이는 백준에 있습니다.
 
-## 재귀 깊이 제한 해제 및 dx, dy
+## 풀이 
 
+재귀 깊이 제한 해제 및 dx, dy
 ```python
 import sys
 sys.setrecursionlimit(1000000)
