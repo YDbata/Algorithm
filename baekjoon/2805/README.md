@@ -61,7 +61,7 @@ if __name__ == "__main__":
     re = 0 # 위에서 부터 어느정도 내려와서 절단기를 설정해야하는지
     for i in range(n):
         if t_sum + t_count*(tree[i] - tree[i + 1]) >= m: # 나무길이를 sort하였으므로 i번째가 i+1보다 무조건 같거나 크다.
-            re += math.ceil((m - t_sum)/t_count)
+            re += math.ceil((m - t_sum)/t_count) # 가장큰나무에서 내려온 절단기 높이
             t_sum += math.ceil((m - t_sum)/t_count)*t_count
             break
         else:
