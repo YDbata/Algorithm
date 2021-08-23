@@ -91,3 +91,6 @@ for x in range(n):
 
 print(re)
 ```
+
+
+<img src="https://user-images.githubusercontent.com/51112432/130473880-acd49930-94d8-4bc1-baaf-4e83c72383ec.png" width="400" />
