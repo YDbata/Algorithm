@@ -18,6 +18,7 @@ N×M 크기의 공간에 아기 상어 여러 마리가 있다.<br>
 #### 규칙 시각화
 
 검은색이 아기상어, 빨간색이 안전거리
+
 <img src="https://user-images.githubusercontent.com/51112432/130468924-cb83b8d6-ce72-4173-8648-48a64aaa6423.png" width="300">
 
 ### 입력
