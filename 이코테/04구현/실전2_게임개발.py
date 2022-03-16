@@ -18,15 +18,36 @@ def check(a, b):
     return 0
 
 
-re = 1
-while check(A, B):
-    D = (4 + (D - 1)) % 4
-    tmp_dir = direct[D]
-    if board[A + tmp_dir[0]][B + tmp_dir[1]] == 0:
+re = 0
+
+
+def find(A, B):
+    global D, re
+    while check(A, B):
+        D = (4 + (D - 1)) % 4  # 0북 1동 2남 3서
+        tmp_dir = direct[D]
+        if board[A + tmp_dir[0]][B + tmp_dir[1]] == 0:
+            if board[A][B] == 0:
+                re += 1
+            board[A][B] = 2
+            find(A + tmp_dir[0], B + tmp_dir[1])
+            A += tmp_dir[0]
+            B += tmp_dir[1]
+
+
+    rD = (4 + (D - 2)) % 4
+    if board[A + direct[rD][0]][B + direct[rD][1]] == 1:
+        return re
+    else:
+        if board[A][B] == 0:
+            re += 1
         board[A][B] = 2
-        A += tmp_dir[0]
-        B += tmp_dir[1]
-        re += 1
+        find(A + direct[rD][0], B + direct[rD][1])
+
+
+find(A, B)
 
 
 print(re)
+
+# 다시 풀어보기
