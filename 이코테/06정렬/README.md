@@ -19,9 +19,10 @@ array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
 
 
 def swap(x, y):
-    tmp = array[x]
-    array[x] = array[y]
-    array[y] = tmp
+    array[x], array[y] = array[y], array[x]
+    # tmp = array[x]f
+    # array[x] = array[y]
+    # array[y] = tmp
 
 
 for i in range(len(array)):
@@ -35,4 +36,18 @@ for i in range(len(array)):
 
 print(*array, sep=" ")
 ```
+
+### 선택정렬의 시간복잡도
+선택정렬의 시간복잡도는 이중 for문이 가장 큰 연산을 담당하므로 빅오표기법으로 나타내면
+최선과 최악의 경우 모두 O(N²)이다.
+
 ## 삽입정렬
+
+한 데이터를 확인하여 적절한 위치에 삽입한다고 하여 삽입정렬이다.
+
+```python
+array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+
+for i in range(len(array)):
+    
+```
