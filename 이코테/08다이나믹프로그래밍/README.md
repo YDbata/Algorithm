@@ -82,3 +82,42 @@ for i in range(2, len(num_l)):
 
 print(re)
 ```
+
+## 바닥공사
+```python
+N = int(input())
+
+re_l = [0 for i in range(N + 1)]
+re_l[0] = re_l[1] = 1
+
+for i in range(2, N + 1):
+    re_l[i] = (re_l[i - 1] + re_l[i - 2] * 2) % 796796
+
+print(re_l[N])
+
+```
+## 실전4 효율적인 화폐구성
+
+```python
+N, M = map(int, input().split())
+num_l = [int(input()) for _ in range(N)]
+num_l.sort(reverse=True) # 오름차순
+
+count_l = [98765 for _ in range(10000)]
+count_l[num_l[-1]] = 1
+
+for i in num_l:
+    count_l[i] = 1
+
+for i in range(num_l[-1], M - num_l[-1] + 1):
+    if count_l[i] != 98765:
+        for c in num_l:
+            if count_l[i + c] > count_l[i]:
+                count_l[i + c] = count_l[i] + 1
+
+if count_l[M] != 98765:
+    print(count_l[M])
+else:
+    print(-1)
+
+```
