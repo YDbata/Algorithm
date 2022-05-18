@@ -1,12 +1,13 @@
+from itertools import combinations
+
 n, m = map(int, input().split())
 
-m_l = [n for _ in range(m + 1)]
+m_l = [0 for _ in range(m + 1)]
 
 for num in list(map(int, input().split())):
-    m_l[num] -= 1
+    m_l[num] += 1
 
 re = 0
-for i in range(1, m + 1):
-    re += n - m_l[i]
-
-print(sum(m_l[1:]))
+for c in combinations(m_l, 2):
+    re += c[0]*c[1]
+print(re)
