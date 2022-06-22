@@ -23,6 +23,7 @@ for x in range(n):
             stud.append((x, y))
 
 combi = combinations(range(n * n), 3)
+# (0, 1, 2) , (0,1,3) ... (n*n - 2, -1 n*n)
 for x, y, z in combi:
     if board[x // n][x % n] == 'X' and board[y // n][y % n] == 'X' and board[z // n][z % n] == 'X':
         tmp = set()
