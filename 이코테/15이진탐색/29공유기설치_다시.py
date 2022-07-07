@@ -1,5 +1,7 @@
+import sys
+
 n, c = map(int,input().split())
-lst = [int(input()) for _ in range(n)]
+lst = [int(sys.stdin.readline()) for _ in range(n)]
 lst.sort()
 
 s = 1
