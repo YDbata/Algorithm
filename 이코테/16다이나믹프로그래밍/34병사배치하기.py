@@ -1,18 +1,11 @@
 n = int(input())
 
 lst = list(map(int, input().split()))
+memo = [1 for _ in range(n)]
 
-count_n = 1
-cur = lst[0]
-for i in range(1, n):
-    if lst[i] < cur:
-        count_n += 1
-    else:
-        c = 0
-        while lst[i] > lst[i - c - 1]:
-            c += 1
-        count_n += 1 - c
-    # print(i, count_n, cur)
-    cur = lst[i]
+for i in range(n):
+    for j in range(i):
+        if lst[i] < lst[j]:
+            memo[i] = max(memo[i], memo[j] + 1)
 
-print(n - count_n)
+print(n - max(memo))
