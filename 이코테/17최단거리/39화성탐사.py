@@ -3,12 +3,6 @@ import heapq
 t = int(input())
 dx, dy = [0, 0, 1, -1], [1, -1, 0, 0]
 
-
-def dijk(s):
-
-    return
-
-
 for _ in range(t):
     n = int(input())
     board = []
