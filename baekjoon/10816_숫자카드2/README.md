@@ -1,6 +1,6 @@
 # 10816 숫자카드2
 
-https://school.programmers.co.kr/learn/courses/30/lessons/178871
+https://school.programmers.co.kr/learn/courses/30/lessons/10816
 
 ## 문제 이해
 
