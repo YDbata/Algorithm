@@ -23,7 +23,7 @@ char* getMonthName(int month){
 
 
 bool hasDuplicate(const vector<int>& array){
-    /* 1) 아래와 같이 작성하는 것은 아주 일반 적이나
+    /* 1_코딩과 디버깅에 관하여) 아래와 같이 작성하는 것은 아주 일반 적이나
     * 코딩 대회에서는 빠르고 간결해야 디버깅이 쉽기 때문에 메크로를 사용하곤 한다. */
 
     /* 메크로 비사용 버전
